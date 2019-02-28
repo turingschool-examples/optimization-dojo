@@ -33,6 +33,23 @@ bundle
 rake sample_data:load
 ```
 
+OR
+
+If you would like to use Docker:
+
+```bash
+git clone git://github.com/JumpstartLab/blogger_advanced.git
+cd blogger_advanced
+git checkout -t origin/blogger-perf-workshop
+docker-compose build
+docker-compose up
+```
+Then, in a separate console:
+
+```
+docker-compose run web rake sample_data:load_docker
+```
+
 You should see a bunch of output from postgres as it loads up each table
 from the db dump. Once it finishes, you can verify your dataset by
 firing up a rails console and checking counts for our models:

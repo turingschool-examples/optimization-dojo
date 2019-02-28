@@ -1,15 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  host: db
+  username: postgres
+  password:
+  pool: 5
+  timeout: 5000
+
 development:
-  encoding: unicode
-  adapter: postgresql
+  <<: *default
   database: blogger_advanced_development
-  pool: 5
-  timeout: 5000
+
 test:
-  encoding: unicode
-  adapter: postgresql
+  <<: *default
   database: blogger_advanced_test
-  pool: 5
-  timeout: 5000
 
 production:
   encoding: unicode
