@@ -6,4 +6,13 @@ namespace :sample_data do
     puts load_cmd
     system(load_cmd)
   end
+
+  desc "Load pre-generated PG data into Dev db in Docker env"
+  task :load_docker => ["db:drop", "db:create"] do
+    load_cmd = "pg_restore --verbose --clean --no-acl --no-owner -h db -U postgres -d blogger_advanced_development #{Rails.root.join("blogger_large_dataset.dump")}"
+    puts "will load Data dump into local PG database with command:"
+    puts load_cmd
+    system(load_cmd)
+  end
+
 end
