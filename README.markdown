@@ -55,11 +55,17 @@ from the db dump. Once it finishes, you can verify your dataset by
 firing up a rails console and checking counts for our models:
 
 ```
-rails c
+docker-compose run web rails c
 Loading development environment (Rails 4.1.10)
 irb(main):001:0> Article.count
    (21.7ms)  SELECT COUNT(*) FROM "articles"
 => 70001
+```
+
+You can start your server using `docker-compose` like so:
+
+```
+docker-compose run web rails s
 ```
 
 ## Dependencies for blogger-perf-workshop branch
