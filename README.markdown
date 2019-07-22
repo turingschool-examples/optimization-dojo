@@ -26,7 +26,7 @@ To get set up with the app, checkout the branch, and load the sample
 data, run these commands:
 
 ```bash
-git clone git://github.com/JumpstartLab/blogger_advanced.git
+git clone git://github.com/turingschool-examples/blogger_advanced.git
 cd blogger_advanced
 git checkout -t origin/blogger-perf-workshop
 bundle
@@ -38,7 +38,7 @@ OR
 If you would like to use Docker:
 
 ```bash
-git clone git://github.com/JumpstartLab/blogger_advanced.git
+git clone git://github.com/turingschool-examples/blogger_advanced.git
 cd blogger_advanced
 git checkout -t origin/blogger-perf-workshop
 docker-compose build
