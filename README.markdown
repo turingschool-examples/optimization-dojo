@@ -25,8 +25,8 @@ re-generate all the data via the seed task yourself.
 To get set up with the app, checkout the branch, and load the sample
 data, run these commands:
 
+clone this repo
 ```bash
-git clone git://github.com/turingschool-examples/blogger_advanced.git
 cd blogger_advanced
 git checkout -t origin/blogger-perf-workshop
 bundle
